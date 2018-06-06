@@ -1,0 +1,38 @@
+.home {
+    position: relative;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    background-color: blueviolet;
+    z-index: 2;
+}
+
+.header__text {
+    display: block;
+    width: 100%;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+}
+
+.icon {
+    position: absolute;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-edit {
+    right: 15px;
+}
+
+.icon-plus {
+    right: 50px;
+}
+
+.some-list {
+    padding: 10px 15px 40px;
+    height: 40px;
+}
