@@ -33,6 +33,12 @@ Page({
         })
     },
 
+    back: function() {
+        wx.navigateBack({
+            delta: 1
+        })
+    },
+
     onShareAppMessage: function() {
         return {
             title: '炒鸡记事本',
