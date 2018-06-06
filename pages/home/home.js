@@ -9,6 +9,26 @@ Page({
     },
 
     onLoad: function() {
-        //
+      var searchLog = wx.getStorageSync('searchLog');
+        if (searchLog) {
+            this.setData({
+                list: JSON.parse(searchLog)
+            })
+        }
+    },
+
+    onShow: function() {
+        var searchLog = wx.getStorageSync('searchLog');
+        if (searchLog) {
+            this.setData({
+            list: JSON.parse(searchLog)
+            })
+        }
+    },
+
+    add: function() {
+        wx.navigateTo({
+            url: '../model/model'
+        })
     }
 });

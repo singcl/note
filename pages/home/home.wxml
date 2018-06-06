@@ -3,11 +3,11 @@
     <view class="header">
         <text class="header__text">记事本</text>
         <image src="../../images/editor.png" class="icon icon-edit" />
-        <image src="../../images/add.png" class="icon icon-plus" />
+        <image src="../../images/add.png" class="icon icon-plus" bindtap="add" />
     </view>
 
     <scroll-view class="some-list">
-        <view class="list-item" wx:for="{{list}}" data-index="{{index}}">
+        <view class="list-item" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
             <image 
                 data-index="{{index}}"
                 data-src="{{item.check ? '../../images/check_true.png' : '../../images/check_false.png'}}"
