@@ -24,3 +24,11 @@ page {
   visibility: hidden;
   height: 0
 }
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

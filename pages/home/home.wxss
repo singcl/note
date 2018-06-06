@@ -5,7 +5,7 @@
 .header {
     position: relative;
     width: 100%;
-    background-color: blueviolet;
+    background-color: #1aad19;
     z-index: 2;
 }
 
@@ -35,4 +35,29 @@
 .some-list {
     padding: 10px 15px 40px;
     height: 40px;
+    box-sizing: border-box;
+}
+
+/* buttom */
+.bottom-btn-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 30rpx;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    width: 80px;
+    line-height: 30px;
+    background-color: #1aad19;
+    color: #fff;font-size: 14px;
+    margin: 5px 0;
+}
+
+.btn-save {
+    margin-right: 10px;
 }
