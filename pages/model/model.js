@@ -29,7 +29,7 @@ Page({
         var idx = this.data.currentModelIndex;
         wx.setStorageSync('modelBack', this.data.modelSrc[idx]);
         wx.redirectTo({
-            url: '../index/index'
+            url: '../edit/edit'
         })
     },
 
