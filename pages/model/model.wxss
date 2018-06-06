@@ -1,0 +1,57 @@
+.model {
+    position: relative;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #1aad19;
+}
+
+.header__text {
+    display: block;
+    width: 100%;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+}
+
+.back {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.model-box {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.model-item {
+    width: 33.3%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.model-img {
+    display: block;
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+}
+
+.model-active {
+    border-color: #1aad19;
+}
+
+.model-btn {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #1aad19;
+    line-height: 44px;
+    color: #fff;
+}

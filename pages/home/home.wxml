@@ -2,7 +2,7 @@
 <view class="home">
     <view class="header">
         <text class="header__text">记事本</text>
-        <image src="../../images/editor.png" class="icon icon-edit" />
+        <image src="../../images/editor.png" class="icon icon-edit" bindtap="edit" />
         <image src="../../images/add.png" class="icon icon-plus" bindtap="add" />
     </view>
 
@@ -26,7 +26,7 @@
     </scroll-view>
 
     <view class="bottom-btn-box {{checkStatus ? 'show' : 'hidden'}}">
-        <button class="btn btn-save">完成</button>
+        <button class="btn btn-save" bindtap="save">完成</button>
         <button class="btn btn-del">删除</button>
     </view>
 </view>

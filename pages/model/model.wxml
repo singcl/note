@@ -1,1 +1,19 @@
-<view>MOdel</view>
+<view class="model">
+    <view class="header">
+        <image class="back" src="../../images/goback.png" />
+        <text class="header__text">选择模板</text>
+    </view>
+
+    <view class="model-box clearfix">
+        <view class="model-item" wx:for="{{modelSrc}}" wx:key="index">
+            <image
+                src="{{item}}"
+                class="model-img {{currentModelIndex === index ? 'model-active' : ''}}"
+                data-current="{{index}}"
+                bindtap="select"
+                />
+        </view>
+    </view>
+
+    <button class="model-btn" bindtap="save">保存</button>
+</view>

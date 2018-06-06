@@ -30,5 +30,16 @@ Page({
         wx.navigateTo({
             url: '../model/model'
         })
+    },
+
+    edit: function() {
+        this.setData({
+            checkStatus: true
+        })
+    },
+    save: function() {
+        this.setData({
+            checkStatus: false
+        })
     }
 });
