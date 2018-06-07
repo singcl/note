@@ -1,1 +1,22 @@
-<view>Edit Note</view>
+<view class="page-edit">
+    <!-- 坑点：小程序中background-image：url() 中url路径只能是网络路径或者base64。不能是本地图片的相对路径。 -->
+    <!-- 所以这里我们设置背景图标只能通过image组件来完成。 -->
+    <image src="{{bg}}" class="bg" />
+
+    <scroll-view>
+        <view class="header">
+            <image src="../../images/goback.png" class="back" bindtap="back" />
+            <text class="header__text">选择模板</text>
+        </view>
+        <form class="form-box" bindsubmit="editFormSubmit">
+            <view class="date-picker">
+                <picker mode="date" value="{{date}}" start="2015-09-01" end="2019-09-01" bindchange="bindDateChange">
+                    <view class="picker-content">当前选择: {{date}}</view>
+                </picker>
+            </view>
+            <input placeholder="标题" name="title" class="title" value="{{title}}" />
+            <textarea placeholder="内容" name="content" class="content" value="{{content}}"></textarea>
+            <button class="btn" form-type="submit">保存</button>
+        </form>
+    </scroll-view>
+</view>
