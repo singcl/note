@@ -10,16 +10,16 @@
         <view class="list-item" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
             <image 
                 data-index="{{index}}"
-                data-src="{{item.check ? '../../images/check_true.png' : '../../images/check_false.png'}}"
                 src="{{item.check ? '../../images/check_true.png' : '../../images/check_false.png'}}" 
-                class="list-check {{checkStatus ? 'show' : 'hidden'}}"/>
+                class="list-check {{checkStatus ? 'show' : 'hidden'}}"
+                bindtap="check"/>
             
-            <view class="{{checkStatus ? 'list-pad' : 'list-rgt'}}">
+            <view class="{{checkStatus ? 'list-pad' : 'list-rgt'}}" data-index="{{index}}" bindtap="showListDetail">
                 <view class="list-time">{{item.time}}</view>
                 <view class="list-title">{{item.title}}</view>
                 <view class="list-text">
-                    <text class="create-time">{{item.create_time}}</text>
-                    {{item.text}}
+                    <text class="create-time">{{item.createTime}}</text>
+                    {{item.content}}
                 </view>
             </view>
         </view>

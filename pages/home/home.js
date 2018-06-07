@@ -26,6 +26,15 @@ Page({
         }
     },
 
+    check: function(e) {
+        var newList = this.data.list;
+        var idx = +e.currentTarget.dataset.index;
+        newList[idx].check = newList[idx].check ? false : true;
+        this.setData({
+            list: newList
+        })
+    },
+
     add: function() {
         wx.navigateTo({
             url: '../model/model'
@@ -40,6 +49,15 @@ Page({
     save: function() {
         this.setData({
             checkStatus: false
+        })
+    },
+
+    showListDetail: function(e) {
+        var idx = +e.currentTarget.dataset.index;
+        var detailBoj = this.data.list[idx];
+        wx.setStorageSync('msgDetail', JSON.stringify(detailBoj));
+        wx.navigateTo({
+            url: '../edit/edit'
         })
     }
 });

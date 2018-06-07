@@ -16,7 +16,7 @@ Page({
         }
 
         if (msg) {
-            msgObj = JSON.parse(msg);
+            var msgObj = JSON.parse(msg);
             this.setData({
                 date: msgObj.date,
                 title: msgObj.title,
@@ -49,7 +49,7 @@ Page({
         obj.push({
             title: e.detail.value.title,
             content: e.detail.value.content, 
-            time: this.data.date,
+            date: this.data.date,
             createTime: nowStr,
             check:false,
             bg: this.data.bg
