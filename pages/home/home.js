@@ -53,11 +53,9 @@ Page({
     },
     del: function() {
         var list = this.data.list;
-
         var newList = list.filter(function(item) {
             return !item.check
         });
-
         if (list.length === newList.length) {
             wx.showToast({
                 title: '至少选中一条',
@@ -66,7 +64,6 @@ Page({
             })
             return;
         }
-
         this.setData({
             list: newList
         })
