@@ -6,7 +6,7 @@
         <image src="../../images/add.png" class="icon icon-plus" bindtap="add" />
     </view>
 
-    <scroll-view class="some-list">
+    <scroll-view scroll-y class="some-list">
         <view class="list-item" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
             <image 
                 data-index="{{index}}"

@@ -35,7 +35,7 @@
 
 /* 笔记列表 */
 .some-list {
-    padding: 10px 15px 40px;
+    padding: 0 15px;
     height: calc(100% - 44px);
     box-sizing: border-box;
 }
