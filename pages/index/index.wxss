@@ -1,8 +1,26 @@
 /**index.wxss**/
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .userinfo {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
+  padding-left: 15px;
 }
 
 .userinfo-avatar {
@@ -13,9 +31,24 @@
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color: #445569;
 }
 
 .usermotto {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: bold;
   margin-top: 200px;
+}
+
+.user-motto {
+    display: block;
+}
+
+.user-motto:last-child {
+    padding-top: 5px;
+    color: #ff5722;
+    text-align: center;
+    text-decoration: underline;
 }

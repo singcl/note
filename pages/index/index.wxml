@@ -1,5 +1,6 @@
 <!-- index.wxml -->
 <view class="container">
+  <image class="bg" src="../../images/bg1.jpg" />
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
       获取头像昵称
@@ -10,6 +11,7 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto" bindtap="goToHome">{{motto}}</text>
+    <text class="user-motto">欢迎使用简单笔记</text>
+    <text class="user-motto" bindtap="goToHome">点击进入</text>
   </view>
 </view>
