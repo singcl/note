@@ -51,6 +51,27 @@ Page({
             checkStatus: false
         })
     },
+    del: function() {
+        var list = this.data.list;
+
+        var newList = list.filter(function(item) {
+            return !item.check
+        });
+
+        if (list.length === newList.length) {
+            wx.showToast({
+                title: '至少选中一条',
+                icon: 'success',
+                duration: 1000
+            })
+            return;
+        }
+
+        this.setData({
+            list: newList
+        })
+        wx.setStorageSync('searchLog', JSON.stringify(newList)); 
+    },
 
     showListDetail: function(e) {
         var idx = +e.currentTarget.dataset.index;

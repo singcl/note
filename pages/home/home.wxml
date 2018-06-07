@@ -27,6 +27,6 @@
 
     <view class="bottom-btn-box {{checkStatus ? 'show' : 'hidden'}}">
         <button class="btn btn-save" bindtap="save">完成</button>
-        <button class="btn btn-del">删除</button>
+        <button class="btn btn-del" bindtap="del">删除</button>
     </view>
 </view>
